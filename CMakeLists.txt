@@ -43,7 +43,14 @@ add_library(
     hyperengine STATIC 
     ${hyperengine_source}
 )
-target_compile_definitions(hyperengine PRIVATE PLATFORM_MAXOS)
+target_compile_definitions(hyperengine PRIVATE HE_PLATFORM_MACOS)
+
+# Include directories for the hyperengine 
+target_include_directories(hyperengine PUBLIC 
+                            "${PROJECT_SOURCE_DIR}/"
+                            "${PROJECT_SOURCE_DIR}/HyperEngine"
+                            "${PROJECT_SOURCE_DIR}/HyperEngine/vendor/spdlog/include"
+                            )
 
 ###############
 #   Sandbox   #
@@ -54,7 +61,7 @@ file(GLOB sandbox_sources RELATIVE ${PROJECT_SOURCE_DIR}  Sandbox/*.cpp)
 add_executable(sandbox ${sandbox_sources})
 
 # Include directories for the sandbox application
-# target_include_directories(sandbox PUBLIC "${PROJECT_SOURCE_DIR}/")
+target_include_directories(sandbox PUBLIC "${PROJECT_SOURCE_DIR}/Sandbox")
 
 # Link sandbox with the hyperengine library
 target_link_libraries(sandbox PUBLIC hyperengine)
