@@ -38,7 +38,7 @@ endif()
 ###############
 
 # define the hyperengine static library
-file(GLOB_RECURSE hyperengine_source RELATIVE ${PROJECT_SOURCE_DIR} HyperEngine/src/*.cpp) 
+file(GLOB_RECURSE hyperengine_source RELATIVE ${PROJECT_SOURCE_DIR} HyperEngine/src/**/*.cpp) 
 add_library(
     hyperengine STATIC 
     ${hyperengine_source}
@@ -52,6 +52,10 @@ target_include_directories(hyperengine PUBLIC
                             "${PROJECT_SOURCE_DIR}/HyperEngine/vendor/spdlog/include"
                             )
 
+# Precompile the hyperengine
+target_precompile_headers(hyperengine PRIVATE 
+                            "${PROJECT_SOURCE_DIR}/HyperEngine/hepch.hpp"
+)       
 ###############
 #   Sandbox   #
 ###############

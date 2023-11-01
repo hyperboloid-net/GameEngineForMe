@@ -1,8 +1,9 @@
 #pragma once
 
-#include <memory>
+#include "hepch.hpp"
 #include "Core.hpp"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 // core log macros
 #define HE_CORE_TRACE(...)      ::HyperEngine::Log::GetCoreLogger()->trace(__VA_ARGS__)

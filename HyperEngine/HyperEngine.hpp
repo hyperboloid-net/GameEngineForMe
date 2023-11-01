@@ -1,13 +1,13 @@
 #pragma once
 
-//--------- For Application ---------
 #include <iostream>
-//  Entry Point 
-#include "src/EntryPoint.hpp"
-//  Log
-#include "src/Log.hpp"
+#include "src/Core/EntryPoint.hpp"
+#include "src/Core/Log.hpp"
+#include "src/Core/Core.hpp"
+#include "src/Core/Application.hpp"
 
+#include "src/Events/Event.hpp"
+#include "src/Events/ApplicationEvent.hpp"
+#include "src/Events/KeyEvent.hpp"
+#include "src/Events/MouseEvent.hpp"
 
-
-#include "src/Core.hpp"
-#include "src/Application.hpp"
