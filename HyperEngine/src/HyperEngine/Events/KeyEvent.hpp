@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Event.hpp"
-#include "src/Core/KeyCodes.hpp"
+#include "HyperEngine/Core/KeyCodes.hpp"
 
 namespace HyperEngine
 {

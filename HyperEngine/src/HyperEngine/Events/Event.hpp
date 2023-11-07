@@ -1,16 +1,16 @@
 #pragma once
 
-#include "hepch.hpp"
-#include "src/Core/Core.hpp"
+#include "HyperEngine/src/hepch.hpp"
+#include "HyperEngine/Core/Base.hpp"
 
 
 
-namespace HyperEngine 
+namespace HyperEngine
 {
     enum class EventType
     {
         None = 0,
-        WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved, 
+        WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
         AppTick, AppUpdate, AppRender,
         KeyPressed, KeyReleased, KeyTyped,
         MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled, MouseScrolling
@@ -68,7 +68,7 @@ namespace HyperEngine
     private:
         Event& m_Event;
     };
-    
+
     inline std::ostream& operator<<(std::ostream& os, const Event& event){
         return os << event.ToString();
     }

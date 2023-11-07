@@ -1,9 +1,9 @@
 #pragma once
 
 #include "Event.hpp"
-#include "hepch.hpp"
+#include "HyperEngine/src/hepch.hpp"
 
-namespace HyperEngine 
+namespace HyperEngine
 {
 
     class WindowCloseEvent: public Event

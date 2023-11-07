@@ -1,7 +1,7 @@
 #pragma once
 
-#include "src/Core/MouseCodes.hpp"
-#include "src/Events/Event.hpp"
+#include "HyperEngine/Core/MouseCodes.hpp"
+#include "Event.hpp"
 
 namespace  HyperEngine
 {

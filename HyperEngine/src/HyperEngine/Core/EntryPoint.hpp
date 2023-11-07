@@ -1,11 +1,11 @@
 #pragma once
 
 #include "Application.hpp"
-#include "HyperEngine.hpp"
-#include "src/Core/Log.hpp"
-#include "src/Events/ApplicationEvent.hpp"
-#include "src/Events/KeyEvent.hpp"
-#include "src/Events/MouseEvent.hpp"
+#include "Log.hpp"
+#include "Window.hpp"
+#include "HyperEngine/Events/ApplicationEvent.hpp"
+#include "HyperEngine/Events/KeyEvent.hpp"
+#include "HyperEngine/Events/MouseEvent.hpp"
 
 extern HyperEngine::Application* HyperEngine::CreateApplication();
 
@@ -22,6 +22,7 @@ int main(int argc, char ** argv)
     HE_CORE_ERROR(mouseEvent);
     auto const keyEvent = HyperEngine::KeyTypedEvent(32);
     HE_INFO(keyEvent);
+    auto window_handle = HyperEngine::Window::Create();
 
     auto app = HyperEngine::CreateApplication();
     app -> Run();

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "hepch.hpp"
+#include "HyperEngine/src/hepch.hpp"
 
 namespace HyperEngine
 {
 	using KeyCode = std::uint16_t;
-	
+
 	namespace Key
 	{
 		enum : KeyCode
